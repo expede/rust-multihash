@@ -47,6 +47,7 @@ pub use crate::hasher_impl::strobe::{Strobe256, Strobe512, StrobeHasher};
 ///
 /// [`multihash-derive`]: https://docs.rs/multihash-derive
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "arb", derive(arbitrary::Arbitrary))]
 #[derive(Copy, Clone, Debug, Eq, MultihashDigest, PartialEq)]
 #[mh(alloc_size = 64)]
 pub enum Code {
